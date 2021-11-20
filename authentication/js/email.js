@@ -59,6 +59,7 @@ function createLogin() {
             };
             //console.log(NovoUsuario);
             Usuarios.child(usuario).set(NovoUsuario);
+            console.log('Novo Usuario criado no BD');
             //////rrrrrr
             window.location.replace("../../");
         });
@@ -130,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         infologin.innerText = 'Você está logado como: '+currentUser.email;
         SalvaUsuarioStorage();
         /////rrrrrrr
-        window.location.replace("../../");
+        //window.location.replace("../");
         //window.location.replace("https://carlosmagno.github.io/quiz-biblico/");
         //Quando o conteudo for carregado se for um usuário logado posso usar esse código para exibir o conteudo especifico
     }else {

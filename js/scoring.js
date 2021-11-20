@@ -30,7 +30,7 @@ var pontosPerdedor;
 var nLinha = 0;
 
 function getScoringDataBase2() {
-    //console.log(1);
+    console.log(1);
     refScoring.once('value').then(snap=>{
         //var dados = snap.val()
         snap.forEach ((childSnapshot) => {
@@ -75,24 +75,28 @@ function getScoringDataBase() {
         });
         console.log("array: ", arrayScore);
         inverteArray();
+        
     });
 
 };
 var arrayInvertido=[]
 function inverteArray(){
     arrayInvertido = arrayScore.reverse()
+    
     //console.log("array invertido: ", arrayScore);
     arrayInvertido.forEach((iten,index) => {
         //console.log(iten);
         if (index<10){
             ExibeDadoScore(iten, index)
+            
         }
 
     })
 }
 
 function ExibeDadoScore(iten,index){
-    if(location.href.endsWith('score')){
+    
+    if(location.href.endsWith('score/')||location.href.endsWith('score')){
         const divScore = document.getElementById('TextoPgScore')
         var spanN = document.createElement('span')
         var spanData = document.createElement('span') 
