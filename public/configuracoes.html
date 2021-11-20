@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+
+    <link rel="stylesheet" href="css/estiloconfig.css">
+    <link rel="stylesheet" href="css/estilo2.css">
+    
+</head>
+<body>
+    <header class="header">
+        
+        <img class="logo" src="images/img_quiz_menor.png" alt="Logomarca SGC">
+        <nav>
+            <ul class="menu">
+                <li ><a href="" class="men menu1" onclick="logout2()" id="i"> Sair </a></li>
+                <li ><a href="../" class="men menu1"> Jogo </a></li>
+                <li ><a href="configuracoes" class="men menu1">Configurações</a></li>
+                <li ><a href="score" class="men menu2">Score</a></li>
+                <li ><a href="sobre" class="men menu4">Sobre</a></li>
+                <li ><a id="Colaboradores"  href="colaboradores" class="men menu3">Colaboradores</a></li>
+               
+                
+            </ul>
+        </nav>
+    
+    </header>
+    <div id="login"> <span class="infoUser" id="textoID"> ID Usuário: </span><span class="infoUser" id="UserID"></span> ---<span href="" class="infoUser" id="infologin2"></span>
+    </div>
+    <div class="container" id="gridgeral">
+        <div class="internogrid" id="tituloconfig">
+           <h2>Configurações </h2>
+           <!-- <a id="Colaboradores" href="colaboradores" class="men">Acesso Colaboradores</a> -->
+            <input type="button" value="SALVAR" class="btalt" id="btnSalvar">
+        </div>
+        <div class="internogrid" id="partida">
+            Partida
+            <form action="">
+            
+                <label for="categoria">Categoria:</label>
+                    <select name="categoria" id="categoria" class="alt">
+                        <option>
+
+                        </option>
+                    </select>
+
+                <label for="tempo">Tempo:</label>
+                <input type="number" name="tempo" id="tempo">
+
+                <label for="pontos">Pontos:</label>
+                <input type="number" name="pontos" id="pontos">
+
+                <label for="totalperguntas">Total de Perguntas:</label>
+                <input type="number" name="totalperguntas" id="totalperguntas">
+
+                <label for="ConfigVoz">Modo Voz:</label>
+                <select name="ConfigVoz" id="ConfigVoz" class="alt">
+                    
+                    <option value="Ativado">Ativado</option>
+                    <option value="Desativado">Desativado</option>
+                </select>
+                <!-- <input type="button" value="Sortear" class="btalt" id="btnOrdemPerguntas"> -->
+                <label for="ConfigVoz" id="btnOrdemPerguntas">Ordem Perguntas:</label>
+                <input type="text" name="UltimaAlteracaoBD" id="UltimaAlteracaoBD" value="Ultima alteração" readonly>
+
+            </form>
+        </div>
+        <div class="internogrid" id="eq1">
+            Equipe 1
+            <form action="#" class="forms">
+                <label for="NomeEquipe1">Nome:</label>
+                <input type="text" name="NomeEquipe1" id="NomeEquipe1">
+
+                <label for="Eq1Jogador1">Jogador1:</label>
+                <input type="text" name="Eq1Jogador1" id="Eq1Jogador1">
+
+                <label for="Eq1Jogador2">Jogador2:</label>
+                <input type="text" name="Eq1Jogador2" id="Eq1Jogador2">
+
+                <label for="Eq1Jogador3">Jogador3:</label>
+                <input type="text" name="Eq1Jogador3" id="Eq1Jogador3">
+
+                <label for="Eq1Jogador4">Jogador4:</label>
+                <input type="text" name="Eq1Jogador4" id="Eq1Jogador4">
+
+                <label for="Eq1Jogador5">Jogador5:</label>
+                <input type="text" name="Eq1Jogador5" id="Eq1Jogador5">
+            </form>
+        </div>
+        <div class="internogrid" id="eq2">
+            Equipe 2
+            <form action="#" class="forms">
+                <label for="NomeEquipe2">Nome:</label>
+                <input type="text" name="NomeEquipe2" id="NomeEquipe2">
+
+                <label for="Eq2Jogador1">Jogador1:</label>
+                <input type="text" name="Eq2Jogador1" id="Eq2Jogador1">
+
+                <label for="Eq2Jogador2">Jogador2:</label>
+                <input type="text" name="Eq2Jogador2" id="Eq2Jogador2">
+
+                <label for="Eq2Jogador3">Jogador3:</label>
+                <input type="text" name="Eq2Jogador3" id="Eq2Jogador3">
+
+                <label for="Eq2Jogador4">Jogador4:</label>
+                <input type="text" name="Eq2Jogador4" id="Eq2Jogador4">
+
+                <label for="Eq2Jogador5">Jogador5:</label>
+                <input type="text" name="Eq2Jogador5" id="Eq2Jogador5">
+
+            </form>
+        </div>
+        <div class="internogrid" id="categoriasperguntas">
+           Categorias/ Perguntas
+           <p></p>
+            <ul name="contagemperguntas" id="contagemperguntas">
+
+            </ul>
+        </div>
+        <!-- <div class="internogrid" id="geral">
+            geral
+        </div>
+        <div class="internogrid" id="avisos">
+            avisos
+        </div> -->
+        <div class="internogrid" id="btarea">
+
+            
+        </div>
+
+    </div>
+    <footer>
+        &copy; 2021. Desenvolvido por Carlos Magno em parceria com Misael Bacry
+    </footer>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/acessobd.js"></script>
+    <script src="js/config.js"></script>
+    <script src="authentication/js/app.js"></script>
+
+    <script src="js/colaboradores.js"></script>
+    
+</body>
+</html>

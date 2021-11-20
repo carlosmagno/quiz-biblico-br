@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Bíblico</title>
+    <link rel="stylesheet" href="public/css/estilo2.css">
+    <!-- <script src="public/authentication/js/app.js"></script> -->
+</head>
+<body>
+    <header class="header">
+        
+        <img class="logo" src="public/images/img_quiz_menor.png" alt="Logomarca SGC">
+        <nav>
+            <ul class="menu">
+                
+                <li ><a href="" class="men menu1" onclick="logout2()" id="i"> Sair </a></li>
+                <li ><a href="./" class="men menu1"> Jogo </a></li>
+                <li ><a href="public/configuracoes" class="men menu1">Configurações</a></li>
+                <li ><a href="public/score" class="men menu2">Score</a></li>
+                
+                <li ><a href="public/sobre" class="men menu4">Sobre</a></li>
+                <li ><a id="Colaboradores"  href="public/colaboradores" class="men menu3">Colaboradores</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="login"> <span class="infoUser" id="textoID"> ID Usuário: </span><span class="infoUser" id="UserID"></span> ---<span href="" class="infoUser" id="infologin2"></span>
+    </div>
+    <main>
+        <!--
+        <div id = "titulo">
+            <img id = "img" src="img_quiz.png" alt="">
+        </div>
+        -->
+        <div id = "painel">
+            <h4 id="painelmsg"></h4>
+        </div>
+        <h4 class="inforodada">1ª Rodada / Categoria:
+            <span class="inforodada2" id="infocategoria"></span>
+        </h4>
+        <h4 class="inforodada"> Pontos: 
+            <span class="inforodada" id="pontos"></span> 
+            / Tempo: 
+            <span class="inforodada" id="tempo"></span>
+            / Total de Perguntas:
+            <span class="inforodada" id="TotalPerguntas"></span>
+        </h4>
+        <section class="grid1">
+            <div class="placar1">
+                <p class='equipe' id="iequipe1"> </p> 
+                <p id="PontosEq1"></p>
+                <div id="jogador1">
+                    
+                </div>
+
+            </div>
+
+            <div class="areapergunta">
+                <p > <a href="#"id="npergunta"></a> <a href="#" id="resposta"></a> <a href="#" id="pergunta"> Pergunta: </a></p>
+                <p id="pA" class= "p-alt"> <input type="radio" name="resposta" id="BtA" value="A" class="btalt" onclick="VerificaResposta()"> <!--<input class="btalt" id="BtA" type="button" value="A">--> <a id="AltA" class= "alternativas"> (A) </a></p>
+                <p id="pB"class= "p-alt"> <input type="radio" name="resposta" id="BtB" value="B" class="btalt" onclick="VerificaResposta()"> <!--<<input class="btalt" id="BtB" type="button" value="B">--> <a id="AltB" class= "alternativas"> (B) </a></p>
+                <p id="pC"class= "p-alt"> <input type="radio" name="resposta" id="BtC" value="C" class="btalt" onclick="VerificaResposta()"> <!--<input class="btalt" id="BtC" type="button" value="C">--> <a id="AltC" class= "alternativas"> (C)  </a></p>
+                <p id="pD" class= "p-alt"> <input type="radio" name="resposta" id="BtD" value="D" class="btalt" onclick="VerificaResposta()"> <!--<input class="btalt" id="BtD" type="button" value="D">--> <a id="AltD" class= "alternativas"> (D) </a></p>
+
+            </div>
+
+            <div class="placar2">
+                <p class='equipe' id="iequipe2"></p> 
+                <p id="PontosEq2"></p>
+                <div id="jogador2">
+                    
+                </div>
+            </div>
+
+        </section>
+        <section class="grid2">
+            <!-- <div id="jogador1">
+                Carlos
+            </div> -->
+            
+            <div class="botoes">
+                    <img class = "bt" id = "bt1" src="public/images/btn_play.png" alt="Play" onclick="BtnPlay();">
+                    <img disabled="true" class = "bt" id = "bt2" src="public/images/btn_tempo.png" alt="Tempo">
+                    <img class = "bt" id = "bt3" src="public/images/btn_cancelar.png" alt="Cancelar" onclick="LimparPartida();">
+                    <img  class = "bt" id = "bt4" src="public/images/btn_voz.png" alt="Falar" onclick="falar();">
+                    <!-- <img class = "bt" id = "bt4" src="public/images/btn_salvar.png" alt="Salvar">
+                    <img class = "bt" id = "bt5" src="public/images/btn_configurar.png" alt=""> -->
+                    
+            </div>
+            
+
+    </section>
+    </main>
+
+    <!-- <div> -->
+        <footer id="rodape">
+            &copy; 2021. Desenvolvido por Carlos Magno em parceria com Misael Bacry.
+        </footer>
+    
+    <!-- </div> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="public/js/firebase1.js"></script>
+      <script src="public/js/firebase.js"></script>
+
+    <!-- <script src="public/js/acessobd.js"></script>
+    <script src="public/authentication/js/app.js"></script>
+    <script src="public/js/global.js"></script>
+    <script src="public/js/index.js"></script>
+    <script src="public/js/scoring.js"></script> -->
+    
+    <!-- <script src="public/authentication/js/email.js"></script> -->
+
+    
+</body>
+</html>

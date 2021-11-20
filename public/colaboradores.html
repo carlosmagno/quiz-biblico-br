@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboradores</title>
+    <link rel="stylesheet" href="css/estilocolaboradores.css">
+    <link rel="stylesheet" href="css/estilo2.css">
+    
+</head>
+<body>
+    <header class="header">
+        
+        <img class="logo" src="images/img_quiz_menor.png" alt="Logomarca SGC">
+        <nav>
+            <ul class="menu">
+                <li ><a href="" class="men menu1" onclick="logout2()" id="i"> Sair </a></li>
+                <li ><a href="../" class="men menu1"> Jogo </a></li>
+                <li ><a href="configuracoes" class="men menu1">Configurações</a></li>
+                <li ><a href="score" class="men menu2">Score</a></li>
+                
+                <li ><a href="sobre" class="men menu4">Sobre</a></li>
+                <li ><a id="Colaboradores"  href="colaboradores" class="men menu3">Colaboradores</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="login"> <span class="infoUser" id="textoID"> ID Usuário: </span>
+        <span class="infoUser"id="UserID"></span>
+    <span href="" class="infoUser" id="infologin2"></span>
+    </div>
+    <main>
+        <!--
+        <div id = "titulo">
+            <img id = "img" src="img_quiz.png" alt="">
+        </div>
+        -->
+        <h2>Colaboradores</h2>
+        <h3 class="texto" id="msgNaoColaborador"></h3>
+        <form action="" class="enviopergunta" id="formcolab">
+            <h3>Envio de Perguntas</h3>
+
+            <p><a class="labelform">Categoria</a>
+            <select name="categoria" id="categoria" class="alt">
+                <option value="1">Opção 1
+
+                </option>
+            </select></p>
+            <p><a class="labelform">Pergunta</a><input type="text" name="pergunta" id="pergunta" class="alt"></p>
+            <p><a class="labelform">Alternativa A</a><input type="text" name="IaltA" id="IaltA" class="alt"></p>
+            <p><a class="labelform">Alternativa B</a><input type="text" name="IaltB" id="IaltB" class="alt"></p>
+            <p><a class="labelform">Alternativa C</a><input type="text" name="IaltC" id="IaltC" class="alt"></p>
+            <p><a class="labelform">Alternativa D</a><input type="text" name="IaltD" id="IaltD" class="alt"></p>
+            <!-- <p><a class="labelform">Resposta Certa</a><input type="text" name="correta" id="correta" class="alt"></p> -->
+            
+            <p><a class="labelform">Resposta Certa</a>
+                <select name="correta" id="correta" class="alt">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </p>
+
+            <input id= "botao" type="button" value="Enviar" onclick="EnviarQuestao()">
+            <br>
+            <hr>
+            <a href="categorias" class="link">Adicionar Categoria</a>
+            <hr>
+            <h3 id="NumPerguntas">Total de Perguntas</h3>
+            <ul name="contagemperguntas" id="contagemperguntas">
+
+            </ul>
+        </form>
+        <!-- <h2>Instruções</h2>
+        <p class="texto">Nosso trabalho principal é o ministério cristão e todos somos muito ocupados, por isso os procedimentos adotados são em sua quase totalidade automáticos, mas irão permitir ter um acompanhamento organizado sem gastar tempo (um bem muito valioso).</p>
+
+           
+        <p class="texto">Talvez ao fazer sua leitura ou estudo pessoal da Bíblia ache algum ponto interessante para criar uma boa pergunta para o jogo. Não há objeção quanto a isso e certamente perguntas desse tipo serão edificantes.</p> -->
+    </main>
+    <footer id="">
+        &copy; 2021. Desenvolvido por Carlos Magno em parceria com Misael Bacry
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/acessobd.js"></script>
+    <script src="authentication/js/app.js"></script>
+    <script src="js/colaboradores.js"></script>
+
+    
+</body>
+</html>

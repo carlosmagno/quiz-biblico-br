@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.card-container {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mdl-card {
+  width: 90%;
+  margin: 0 auto 15px auto;
+}
+
+.card-inner {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+}
+
+.card-inner div,
+.card-inner button {
+  display: flex;
+  justify-self: center;
+}
+
+.card-inner div {
+  align-items: center;
+}
+
+.form-control {
+  width: 550px;
+  padding: 10px;
+  margin-bottom: 2vh;
+  border-radius: 0.5vw;
+  text-align: left;
+}
+
+.btn {
+padding: 10px;
+border-radius: 0.5vw;
+}
+.btn:hover {
+  opacity: 50%;
+  /* cursor: move; */
+}
+#infologin {
+color: white;
+width: 550px;
+margin-top: 5vh;
+}
+
+#statuslogin{
+  margin-top: 20px;
+  color:yellow;
+  width:550px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.logo {
+  width:300px;
+  margin-top: 5vh;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  color: rgb(84, 186, 211);
+  font-style: italic;
+
+}
+
+.container-fluid {
+  /* background-color: gray; */
+}
+
+@media (max-width: 700px) {
+  .logo {
+    width:90vw;
+    margin-top: 5vh;
+  }
+
+  .form-control {
+    width: 90vw;
+    padding: 10px;
+    margin-bottom: 2vh;
+    border-radius: 2vw;
+    text-align: left;
+  }
+
+  #infologin {
+    width: 90vw;
+    color: white;
+    margin-top: 5vh;
+    }
+  #statuslogin{
+    width: 90vw;
+    color:yellow;
+    margin-top: 5vh;
+  }
+
+    footer {
+      font-size:3vw;
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      color: rgb(84, 186, 211);
+      font-style: italic;
+  
+  }
+
+  .btn {
+    padding: 10px;
+    border-radius: 2vw;
+    }
+}

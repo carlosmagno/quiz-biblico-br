@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias</title>
+    <link rel="stylesheet" href="css/estilocolaboradores.css">
+    <link rel="stylesheet" href="css/estilo2.css">
+    
+</head>
+<body>
+    <header class="header">
+        
+        <img class="logo" src="images/img_quiz_menor.png" alt="Logomarca SGC">
+        <nav>
+            <ul class="menu">
+                <li ><a href="../" class="men menu1"> Jogo </a></li>
+                <li ><a href="configuracoes" class="men menu1">Configurações</a></li>
+                <li ><a href="score" class="men menu2">Score</a></li>
+                <li ><a href="sobre" class="men menu4">Sobre</a></li>
+                <li ><a id="Colaboradores" href="colaboradores" class="men menu3">Colaboradores</a></li>
+                
+            </ul>
+        </nav>
+
+    </header>
+    <div id="login"> <span class="infoUser" id="textoID"> ID Usuário: </span><span class="infoUser" id="UserID"></span> ---<span href="" class="infoUser" id="infologin2"></span>
+    </div>
+    <main>
+        <h1>Categorias</h1>
+        <form action="#" class="enviopergunta">
+            <h3>Adição de Categorias</h3>
+            <label for="">*Só administradores podem adicionar categorias.</label>
+            <p></p>
+            <label for="categoria" class="labelform"><h3>Categoria</h3></label><p></p>
+            <input type="text" name="categoria" id="categoria" class="alt">
+            <br>
+            <input id= "botao" type="button" value="Adicionar" onclick="referenciabd2.enviarcat()"><p></p>
+
+        </form>
+        <br>
+        <!-- <form action="#" class="categoriacadastrada">
+            <p ><h3 id ="NumCategoria">Total de Categorias Cadastradas:</h3></p>
+            <div >
+                    <ul id="list" >
+    
+                    </ul>
+                        
+            </div>
+            <br>
+        </form> -->
+
+    </main>
+ 
+    <footer>
+        &copy; 2021. Desenvolvido por Carlos Magno em parceria com Misael Bacry
+    </footer>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+          <!-- Add Firebase products that you want to use -->
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/acessobd.js"></script>
+    <script src="js/editacategoria.js"></script>
+    <script src="authentication/js/app.js"></script>
+    
+</body>
+</html>

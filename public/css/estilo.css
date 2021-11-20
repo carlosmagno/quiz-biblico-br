@@ -1,0 +1,117 @@
+ul, body {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.header{
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+
+}
+
+.menu li{
+    margin-left: 20px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    /*background: tomato;*/
+}
+#titulo{
+    background-color: black;
+    color: rgb(255, 168, 7);
+    /*padding: 5px;*/
+    /*width:100;*/
+    /*margin: auto;*/
+    text-align: center;
+    border-radius: 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-color:rgb(255, 255, 255);
+
+}
+
+#painel{
+    background-color: rgb(50, 50, 212);
+    color: white;
+    /*padding: 5px;*/
+    /*width:100 ;*/
+    /*margin: auto;*/
+    text-align: center;
+    border-radius: 30px;
+    border-width: 3px;
+    border-style:solid;
+    border-color: rgb(255, 255, 255)8, 158, 158);  
+}
+
+/* CSS FLEXBOX 1 */
+
+.flex1 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.flex1 > div {
+    flex: 1 1 50px;
+    margin: 10px;
+}
+
+.areapergunta {
+    height: 300px;
+    width: 400px;
+}
+h1 {
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.placar1, .placar2 {
+    font-size:50pt;
+}
+.placar1, .placar2, .areapergunta{
+    max-width: 100%;
+    display: block;
+    background-color: tomato;
+    text-align: center;
+    border-radius: 20px;
+    border-width: 3px;
+    border-style:solid;
+    border-color: white; 
+}
+#corpo{
+    background-color: black;
+    color: white;
+    /*padding: 5px;
+    width:100 ;
+    margin: auto;*/
+    text-align: center;
+    border-radius: 30px;
+    height: 350px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);  
+}
+
+footer{
+    text-align: center;
+}

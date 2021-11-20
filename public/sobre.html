@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="css/estilocolaboradores.css">
+</head>
+<body>
+    <header class="header">
+        
+        <img class="logo" src="images/img_quiz_menor.png" alt="Logomarca SGC">
+        <nav>
+            <ul class="menu">
+                <li ><a href="" class="men menu1" onclick="logout2()" id="i"> Sair </a></li>
+                <li ><a href="../" class="men menu1"> Jogo </a></li>
+                <li ><a href="configuracoes" class="men menu1">Configurações</a></li>
+                <li ><a href="score" class="men menu2">Score</a></li>
+                
+                <li ><a href="sobre" class="men menu4">Sobre</a></li>
+                <li ><a id="Colaboradores"  href="colaboradores" class="men menu3">Colaboradores</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="login"> <span class="infoUser" id="textoID"> ID Usuário: </span>
+        <span class="infoUser"id="UserID"></span>
+    <span href="" class="infoUser" id="infologin2"></span>
+    </div>
+    <h2>O Projeto</h2>
+    <!-- <picture id="">
+        <img id="tela" src="images/tela.png" alt="Tela Principal do Jogo">
+    </picture> -->
+    <br>
+    <p class="texto">
+        O Quiz Bíblico iniciou como projeto pessoal, idealizado e desenvolvido no período 
+        da pandemia do Covid-19, com o objetivo de unir o aprendizado de programação ao própósito de criar uma aplicação útil. O programa proporciona a diversão de uma brincadeira saudável com amigos junto com os conhecimentos vitais da Bíblia Sagrada.
+    </p>
+        <p class="texto">   
+        A primeira versão (1.0) do jogo foi desenvolvida em Microsoft Excel com linguagem de programação VBA e foi distribuída gratuitamente de modo limitado. A versão (2.0) foi desenvolvida para web porque nem todas as pessoas usam o Microsoft Excel devido ao custo da sua licença e para tornar possível o acesso a um público ainda maior. Esta versão para web requereu o aprendizado da linguagem de marcação HTML5, da linguagem de estilos CSS3, da linguagem de progamação JavaScript e do Firebase, uma plataforma de serviços do Google para construção de poderosas aplicações que inclui recursos como autenticação de usuários, banco de dados em tempo real, hospedagem entre outros.
+        Os recursos principais são:
+    </p>
+    <!-- <hr> -->
+        <!-- <details>
+            <summary class="texto">Contribuição com perguntas</summary>
+            <p class="texto">Os usuários colaboradores (aprovados) podem  se registrar e contribuir com perguntas através de um formulário online. </p>
+        </details> -->
+        <!-- <details>
+            <summary class="texto">Contagem de perguntas</summary>
+            <p class="texto">Será exibido o total de perguntas que cada usuário colaborador enviou.  </p>
+        </details> -->
+        <!-- <details> -->
+            <!-- <summary class="texto">Configuração da partida</summary> -->
+            <h3 class="texto">* Configuração da partida</h3>
+            <p class="texto">Para cada partida pode-se escolher a categoria, o tempo de resposta, e os pontos de cada resposta certa. A ordem das perguntas pode ser sorteada.</p>
+        <!-- </details> -->
+        <h3 class="texto">* Banco de Dados</h3>
+        <p class="texto">As configurações personalizadas de cada usuário bem como as perguntas são armazenadas em um poderoso banco de dados realtime do Google Firebase.</p>
+        <!-- <details>
+            <summary class="texto">Opção de voz virtual</summary> -->
+            <h3 class="texto">* Opção de voz virtual</h3>
+            <p class="texto">Pode-se jogar com a voz virtual do navegador ativada. Não é compatível com todos os navegadores. Recomendamos usar as versões mais atuais dos navegadores Google Chrome ou Edge. O programa lê a pergunta, as alternativas e inicia
+                 a contagem de tempo automaticamente. Se a voz estiver desativada, o usuário clica no botão de contagem de tempo.</p>
+        <!-- </details> -->
+        <!-- <details>
+            <summary class="texto">Número de jogadores</summary> -->
+            <h3 class="texto">* Número de jogadores</h3>
+            <p class="texto">Até 10 pessoas divididas em duas equipes podem jogar. O programa chamará os participantes na sequência, alternando
+                 a equipe a cada pergunta. </p>
+        <!-- </details> -->
+        <!-- <details>
+            <summary class="texto">Score</summary> -->
+            <h3 class="texto">* Score</h3>
+            <p class="texto">Há um Score Top 10 que grava as 10 últimas melhores pontuações.  </p>
+        <!-- </details> -->
+    <!-- <hr> -->
+    <!-- <p class="texto">
+        Deseja informar um problema ou uma sugestão? Clique no botão abaixo. Seu feedback é muito importante. 
+    </p> -->
+    <br>
+    <!-- <form action="" id="formulario">
+        <button class="btalt" id="btFormulario">Formulário de Contato</button>
+    </form> -->
+    <br>
+    <footer id="rodapeScore">
+        &copy; 2021. Desenvolvido por Carlos Magno em parceria com Misael Bacry
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/acessobd.js"></script>
+    <script src="authentication/js/app.js"></script>
+    
+</body>
+</html>

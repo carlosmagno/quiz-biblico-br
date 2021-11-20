@@ -1,0 +1,209 @@
+html, body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#btnSalvar {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 30px;
+    width: 200px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 15px;
+}
+#btnOrdemPerguntas {
+    padding: 3px 0;
+    background-color: rgb(119, 118, 118);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#btnOrdemPerguntas:hover {
+    background-color: rgb(210, 238, 117);
+    color: black;
+}
+/* #UltimaAlteracaoBD {
+    height: 50px;
+} */
+.container {
+    display: grid;
+    padding: 20px;
+    margin:0 auto;
+    max-width: 1200px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(135, 148, 122);
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 3vh 2vh 30vh 20vh; */
+    gap:20px;
+    grid-template-areas: 
+    "t t t"
+    "p eq1 eq2"
+    "cp eq1 eq2"
+    "cp eq1 eq2"
+}
+
+.internogrid {
+    
+    background-color: rgb(66, 64, 64);
+    color: rgb(254, 255, 255);
+    border-radius: 10px;
+    box-shadow: rgb(179, 184, 184) 5px 5px 10px;
+    padding: 10px;
+    width:auto;
+    max-width: 25in;
+    text-align: center;
+    
+    /* align-content:flex-start; */
+}
+
+#tituloconfig {
+    grid-area: t;
+    max-width:none ;
+    text-align: center;
+    border-style:none ;
+    box-shadow:none;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 1px;
+}
+
+#partida {
+    grid-area: p;
+    height: fit-content;
+}
+
+#eq1 {
+    grid-area: eq1;
+
+}
+
+#eq2 {
+    grid-area: eq2;
+    
+}
+
+#categoriasperguntas {
+    grid-area: cp;
+    height: 200px;
+}
+
+#geral{
+    grid-area: g;
+}
+
+#avisos{
+    grid-area: a;
+}
+
+#btarea{
+    display: none;
+    grid-area: bt;
+}
+
+.form {
+    display: block;
+}
+
+form>label {
+    /* display:block; */
+width: 100px;
+/* background-color: lawngreen; */
+display: inline-block;
+margin-top:10px;
+text-align: right;
+
+}
+
+input, select{
+    display:inline; 
+    
+    padding: 5px;
+    border-style: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    width: 180px;
+    /* background-color: lawngreen; */
+    
+    /* align-self: center; */
+}
+
+select{
+    width: 190px;
+
+}
+h2 {
+    margin-top:0;
+}
+
+ul {
+    margin-top: 30px;
+}
+
+/* #Colaboradores:hover {
+    background-color: #5f93e2;
+    border-radius: 5px;
+    color: rgb(230, 230, 230);
+} */
+
+@media (max-width: 500px) {
+    .container {
+        display: grid;
+        /* padding: 20px; */
+        background-color: rgb(0, 0, 0);
+        color: rgb(135, 148, 122);
+        grid-template-columns: 1fr ;
+        /* grid-template-rows: 3vh 2vh 30vh 20vh; */
+        gap:18px;
+        grid-template-areas: 
+        "t "
+        "cp"
+        "p "
+        "eq1"
+        "eq2"
+        
+    }
+    #btnSalvar {
+        display: block;
+        margin: 0 auto;
+        width: 85vw;
+        text-align: center;
+    }
+
+    .internogrid {
+    
+
+        border-radius: 10px;
+        box-shadow: rgb(179, 184, 184) 5px 5px 10px;
+        padding: 10px;
+        width:85vw;
+        text-align: center;
+        /* align-content:flex-start; */
+    }
+    form>label{
+        width: 75vw;
+        margin:0 auto;
+        /* background-color: lawngreen; */
+        display:block;
+        margin-top:10px;
+        text-align: left;
+        
+        }
+
+    input, select{
+        display: block;
+        margin:0 auto;
+        /* padding: 5px; */
+        width: 75vw;
+        border-style: none;
+        border-radius: 3px;
+     
+        text-align: left;
+        /* align-self: center; */
+    }
+    input {
+        width: 72vw;
+    }
+
+}

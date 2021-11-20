@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Redirecionamento de Página via JavaScript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function redirecioneSemHistorico() {
+                // Faz um redirecionamento sem adicionar a página original ao histórico de navegação do browser.
+                window.location.replace("http://www.google.com.br");
+            }
+            
+            function redirecioneComHistorico() {
+            //Faz um redirecionamento mantendo a página original no histórico de navegaçãodo browser.
+               window.location.href = "http://www.youtube.com";
+            }
+
+            function PegaUrl() {
+               //Armazena numa variavel o endereço atual na barra de endereço do navegador
+                var endereco = window.location.href;
+                console.log(endereco);
+
+            }
+        </script>
+    
+        <input type="button" value="Redirecionar sem Histórico" onclick="redirecioneSemHistorico();" />
+        
+        <br />
+        <br />
+        
+        <input type="button" value="Redirecionar com Histórico" onclick="redirecioneComHistorico();" />
+    </body>
+</html>

@@ -1,0 +1,571 @@
+body {
+    background-color: rgb(0, 0, 0);
+    
+    margin:0 auto;
+    padding: 0;
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Colaboradores{
+    display: none;
+
+}
+h2{
+    color:white;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/*.menu1 {
+    background-color: rgb(63, 61, 61); 
+    color: black; 
+    border: 2px solid #4CAF50;
+}*/
+
+.men:hover {
+    background-color: #5f93e2;
+    border-radius: 10px;
+    color: rgb(230, 230, 230);
+}
+
+.btalt:hover {
+    background-color: #d3f14b;
+    border-radius: 5px;
+   
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+}
+
+body > div> span {
+    display: inline;
+    color: aqua;
+    /* background-color: khaki; */
+    margin:0 auto;
+    text-align: center;
+    width: 100%;
+    font-size: 0.8em;
+    font-style: italic;
+    }
+
+#login {
+    display: block;
+    margin:0 auto;
+    text-align: center;
+    }
+.header{
+    background: rgb(63, 61, 61);
+    margin:0 auto;
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3px;
+    align-items: center;
+
+}
+
+.menu{
+    display: flex;
+
+}
+
+.menu li{
+    margin-left: 20px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    /*background: tomato;*/
+}
+
+#img {
+    display: flex;
+    min-width: 100px;
+    margin: auto;
+}
+#titulo{
+  
+    display: flex;
+    align-items: center;
+    background-color:black;
+    color: rgb(255, 168, 7);
+    /*padding: 5px;*/
+    /*width:100;*/
+    max-width: 1500px;
+    margin: auto;
+    text-align: center;
+    border-radius: 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-color:black;
+
+}
+
+#painel{
+    background-color: rgb(78, 78, 252);
+    color: white;
+    /*padding: 5px;*/
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 90%;
+    height: 60px;
+
+    text-align:center;
+    vertical-align: middle;
+    border-radius: 1vw;
+    border-width: 0.4vw;
+    border-style:solid;
+    border-color: rgb(255, 255, 255);  
+
+}
+
+#painel>h4 {
+    margin:0;
+    line-height: 60px;
+    font-size: 2.3vw;
+    vertical-align: top;
+}
+
+/* CSS FLEXBOX 1 */
+/*
+.flex1 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.flex1 > div {
+    flex: 1 1 50px;
+    margin: 10px;
+}
+*/
+/*.areapergunta {
+    height: 300px;
+    width: 600px;
+}*/
+.inforodada, .inforodada2 {
+    text-align: center;
+    color: rgb(142, 216, 235);
+    max-height: 12px;
+}
+
+#PontosEq1, #PontosEq2 {
+    font-size:8vw;
+    max-width: 100%;
+    height: 20vh;
+    line-height: 20vh;
+    background-color:rgb(78, 78, 252);
+    color: white;
+    text-align: center;
+    border-radius: 1vw;
+    border-width: 0.4vw;
+    border-style:solid;
+    border-color: white; 
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+#iequipe1, #iequipe2 {
+    font-size: 2vw;
+    min-height: 6vh;
+    line-height: 6vh;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    border-style:hidden;
+    text-align: center;
+    border-radius: 1vw;
+    
+    border:0.4vw solid white;
+    margin-top: 0;
+    margin-bottom: 1vh;
+
+}
+
+.areapergunta{
+    max-width: 100%;
+    height: max-content;
+    min-height: 37vh;
+    max-height: max-content;
+    display: block;
+    background-color:black;
+    color: white;
+    text-align: left;
+    border-radius: 1vw;
+    border: solid 0.4vw  white;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.areapergunta>p {
+    font-size: 3vh;
+    margin:2vh;
+    padding-bottom: 1vh;
+    max-height: max-content;
+    /* background-color: rgb(136, 173, 136); */
+
+    
+}
+
+#resposta {
+    display:none;
+}
+.alternativas {
+    
+    line-height: 20px;
+    vertical-align: middle;
+
+}
+.btalt {
+    
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.p-alt {
+
+    border-radius: 5px;
+    /* background-color: lightgreen; */
+}
+
+#corpo{
+    background-color: rgb(179, 173, 173);
+    color: white;
+    /*padding: 5px;*/
+    width:100 ;
+    margin: auto;
+    text-align: center;
+    border-radius: 30px;
+    height: 120px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;  
+    max-width: 1500px;
+}
+
+.botoes {
+    /* display:flex; */
+    flex-wrap:wrap;
+    margin: 0 auto;
+    /* background-color: lime; */
+   /* min-width: 100px;
+    max-width: 720px;*/
+    align-items: center;
+    /* padding: px; */
+    /*justify-content: space-between;*/
+    justify-items:auto ;
+
+    
+}
+
+.bt {
+    padding: 17px;
+    width: 7vw;
+    max-width: 8vw;
+    min-width: 7vw;
+}
+
+.bt:hover{
+    opacity: 50%;
+ 
+    
+}
+#TextoPgScore >h2{
+    margin: 0 auto;
+    text-align: center;
+    color:white;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+/* CSS GRID 1*/
+
+.grid1{
+    display: grid;
+    /* background-color: turquoise; */
+    grid-template-columns: 21% 55% 21%;
+    grid-template-rows: 100%;
+    height: 40vh;
+    max-width: 90%;
+ 
+    margin: 0 auto;
+    justify-content:space-between;
+    
+}
+
+.placar1, .placar2 {
+    
+    /* height: 45vh; */
+    /* background-color: lawngreen; */
+    /* justify-content:start; */
+    vertical-align: middle;
+}
+.grid2{
+    /* background-color: tomato; */
+    display: grid;
+    grid-template-columns: 90%;
+    height: fit-content;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top:0;
+    justify-content:center;
+}
+#jogador1, #jogador2 {
+    margin-top: 0;
+    /* margin-bottom: 1vh; */
+    font-size: 2vw;
+    min-height: 6vh;
+    line-height: 6vh;
+    background-color: rgb(78, 78, 252);
+    color: white;
+    text-align: center;
+    border-radius: 1vw;
+    border: 0.4vw solid white;
+
+}
+footer {
+    position:relative;
+    text-align: center;
+
+    bottom: 0px;
+    width: 100%;
+    
+    color: rgb(84, 186, 211);
+    font-style: italic;
+
+}
+#rodapeScore{
+    position: relative;
+}
+
+#formulario {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+#btFormulario {
+    width: auto;
+}
+
+#tela {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: white solid 1px;
+
+}
+
+span {
+    color:rgb(106, 237, 241);
+}
+
+#TextoPgScore {
+    margin:0 auto;
+    text-align: center;
+    color:white;
+    height: 70vh;
+}
+
+#TextoPgScore>p {
+    margin:0 auto;
+    text-align: center;
+}
+.spanTexto{
+    color:white;
+    display: inline-block;
+    
+}
+.Nlinha {
+    width: 25px;
+    text-align: right;
+    /* background-color: tomato; */
+    margin-right: 20px;
+}
+.spanData{
+    width: 100px;
+    text-align: right;
+    /* background-color: tomato; */
+}
+.spanVencedor {
+    width: 150px;
+}
+.spanPontosVencedor{
+    width: 80px;
+}
+.spanX{
+    width: 20px;
+}
+.spanPontosPerdedor{
+    width: 80px;
+}
+.spanPerdedor{
+    width: 150px; 
+}
+@media (max-width: 500px) {
+
+    body {
+        grid-template-areas: 
+        "a" "a" "a"
+        "b" "c" "d"
+        "e" "f" "g";
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu li a{
+        display: block;
+        padding: 5px;
+        font-size: 15px;
+        /*background: tomato;*/
+    }
+
+    .header{
+        background: rgb(63, 61, 61);
+        max-width: 100%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 3px;
+        align-items: center;
+    
+    }
+    .logo {
+        display: inline;
+        text-align: center;
+        margin:0 auto;
+
+    }
+    .menu li{
+        margin-left: 0px;
+    }
+    
+    .menu li a{
+        display:inline;
+        font-size:2vh ;
+        /* padding: 1vw; */
+        /*background: tomato;*/
+    }
+
+    .infoUser {
+        display: none;
+    }
+    #infologin2 {
+        display: inline;
+        max-width: 90vw;
+        font-size: 3vw;
+    }
+    #painel {
+        max-width: 90vw;
+        line-height: 5vh;
+        height: 5vh;
+        border: 1vw solid white;
+    
+    }
+
+    .inforodada{
+        font-size:3vw;
+    }
+    #painel>h4 {
+        margin:0;
+        height: 8vw; 
+        line-height: initial;
+        /* height: max-content; */
+        vertical-align: middle;
+        font-size: 0.8em;
+  
+    }
+
+    #iequipe1, #iequipe2 {
+        /* margin:0 auto; */
+        /* background-color: lawngreen; */
+        /* line-height: 4vw; */
+        font-size:3vw;
+        color: white;
+        /* border-style: hidden; */
+        border-width: 1vw;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+
+    #PontosEq1,#PontosEq2 {
+        font-size:8vw;
+        /* max-width: 10vh; */
+        max-height: 10vh;
+        line-height: 10vh;
+        background-color:rgb(78, 78, 252);
+        color: white;
+        text-align: center;
+        /* border-radius: 10px; */
+        border: 1vw solid white;
+    }
+
+    #jogador1, #jogador2 {
+        font-size:4vw;
+        color: white;
+        text-align: center;
+        /* border-radius: 10px; */
+        border: 1vw solid white;
+    }
+
+    .areapergunta {
+        height: max-content;
+        min-height: 27vh;
+        max-height: max-content;
+        margin-bottom: 20vh;
+        color: white;
+        text-align: left;
+        padding-top: 1vh;
+        /* border-radius: 10px; */
+        border: 1vw solid white;
+    }
+    .areapergunta>p {
+        font-size:3.5vw;
+        padding-left: 1vw;
+        margin:0;
+    }
+
+    .bt {
+  
+        width:15vw;
+        max-width: 15vw;
+        height: auto;
+        padding: 5px;
+    }
+    .grid1 {
+        height: content;
+
+
+    }
+    footer {
+        font-size:3vw;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        color: rgb(84, 186, 211);
+        font-style: italic;
+    
+    }
+    #rodape {
+        position: fixed;
+        /* margin-top: 20px; */
+    
+    
+    }
+  }
+
