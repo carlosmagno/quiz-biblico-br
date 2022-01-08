@@ -7,17 +7,25 @@ window.onload = function() {
     //setScoring([getScoringPartida(localStorage.getItem("Vencedor"), localStorage.getItem("Perdedor"),localStorage.getItem("PtVencedor"),localStorage.getItem("PtPerdedor"))])
 };
 
-function setScoring(scoringLista) {
 
-    if(!Array.isArray(scoringLista) || scoringLista == null){
-        console.log("Erro! Não é uma lista"); return;
+function setScoring(scoringPartida) {
+    var resultado = BaixarMenorScore(scoringPartida.PontosVencedor);
+
+    if(resultado){
+        scoringLista.forEach(scoring => {
+            //console.log(scoring)
+            refScoring.child(refScoring.push().key).set(scoring);
+        });
     }
-
-    scoringLista.forEach(scoring => {
-        //console.log(scoring)
-        refScoring.child(refScoring.push().key).set(scoring);
-    });
 };
+
+function BaixarMenorScore(scoreVencedor){
+    //baixando
+    var menorValorBD = 300;
+    var qtdScores = 7;
+
+    return menorValorBD < scoreVencedor || qtdScores <= 9;
+}
 
 
 //var scScore;
