@@ -272,8 +272,7 @@ body > div> span {
     /* padding: px; */
     /*justify-content: space-between;*/
     justify-items:auto ;
-
-    
+   
 }
 
 .bt {
@@ -351,8 +350,13 @@ footer {
     font-style: italic;
 
 }
+
+#rodapeconfig{
+    margin-bottom: 20px;
+}
 #rodapeScore{
     position: relative;
+    margin-bottom: 20px;
 }
 
 #formulario {
@@ -419,6 +423,22 @@ span {
 }
 .spanPerdedor{
     width: 150px; 
+}
+
+#rodapeJogo span{
+    display: inline-block;
+    color:rgb(84, 186, 211);
+} 
+
+#rodapeJogo img, #rodapeJogo svg{
+    vertical-align: middle;
+   margin-left: 10px;
+}
+
+#rodapeJogo #compartilhe{
+    /* background-color: #d3f14b; */
+    vertical-align: middle;
+    line-height: 30px;
 }
 @media (max-width: 500px) {
 
@@ -556,25 +576,35 @@ span {
         padding: 5px;
     }
     .grid1 {
-        height: content;
+        height: 35vh;
 
 
     }
+/* 
+    .grid2{
+        margin: 0 auto;
+        position:absolute;
+        width: 100%;
+        bottom: 10vh;
+        
+    } */
     footer {
         font-size:3vw;
         position: relative;
+        margin-bottom: 20px;
         text-align: center;
         width: 100%;
         color: rgb(84, 186, 211);
         font-style: italic;
     
     }
-    #rodape {
+    #rodapeJogo {
         position: fixed;
         /* margin-top: 20px; */
     
-    
     }
+
+  
 
 
     /* #TextoPgScore {

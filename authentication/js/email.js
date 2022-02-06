@@ -20,13 +20,14 @@ function SalvaUsuarioStorage(){
 
 //Criando as referencias principais do banco de dados realtime do firebase para os dados que quero trabalhar
 const Usuarios = firebase.database().ref('/Usuários');
-
+var btnLogin = document.getElementById("btnLogin");
 /**
  * Função para cadastro com email e senha
  */
 function createLogin() {
     var email = document.getElementById('email').value;
     var senha = document.getElementById('senha').value;
+    
     statuslogin.innerText =""
     //Crio o usuário com e-mail e senha
     firebase.auth().createUserWithEmailAndPassword(email,senha).then(currentUser =>{
@@ -34,7 +35,7 @@ function createLogin() {
         //console.log('Uid', currentUser.user.uid);
         //console.log('Email', currentUser.user.email);
         
-        infologin.innerText = 'Você está logado como: ' +currentUser.user.email
+        //infologin.innerText = 'Você está logado como: ' +currentUser.user.email
         
         //alert('Usuário criado e logado');
         //colocar aqui o quero que aconteça quando o usuário estiver logado, como talvez redirecionar pra outra página
@@ -42,6 +43,10 @@ function createLogin() {
         currentemail=currentUser.user.email
         SalvaUsuarioStorage();
       
+        //firebase.auth().currentUser.sendEmailVerification().then(()=>{
+         //   alert("E-mail de verificação enviado! Clique no link da mensagem enviada para confirmar.")
+        //})
+
         //Cria um nó em Usuários e salva os dados do novo usuário
         Usuarios.once('value').then(snapshot =>{
             //console.log(snapshot.numChildren());  
@@ -62,16 +67,18 @@ function createLogin() {
             console.log('Novo Usuario criado no BD');
             //////rrrrrr
 
-
+/*
             firebase.auth().languageCode = "pt";
             if(!currentUser.emailVerified){
+                btnLogin.setAttribute("disabled", "disabled")
                 currentUser.sendEmailVerification().then(()=>{
-                    alert("E-mail de verificação enviado!")
+                    alert("E-mail de verificação enviado! Clique no link da mensagem enviada para confirmar.")
                 })
             }else{
+                btnLogin.removeAttribute("disabled")
                window.location.replace("../../");
-            }
-              
+           }
+*/              
         });
 
     }).catch(error =>{
@@ -92,13 +99,34 @@ function loginEmail() {
     var email = document.getElementById('email').value;
     var senha = document.getElementById('senha').value;
     statuslogin.innerText =""
+    
+
     //Faço login e autentico o usuário com e-mail e senha
     firebase.auth().signInWithEmailAndPassword(email,senha).then(currentUser =>{
+        
+        //firebase.auth().languageCode = "pt";
+        //if(!currentUser.emailVerified){
+            //btnLogin.setAttribute("disabled", "disabled")
+            //usuario.sendEmailVerification().then(()=>{
+                //alert("E-mail de verificação ainda não confirmado")
+            //})
+       // }else{
+           // btnLogin.removeAttribute("disabled")
+           // console.log('usuario', currentUser);
+           // usuario=currentUser.user.uid;
+           // currentemail=currentUser.user.email
+           // SalvaUsuarioStorage();
+           //.location.replace("../../");
+      //  }
+       
+
         console.log('usuario', currentUser);
         usuario=currentUser.user.uid;
         currentemail=currentUser.user.email
         SalvaUsuarioStorage();
-        window.location.replace("../../");
+        //window.location.replace("../../");
+
+
      ///////rrrrrrrrr
      /*firebase.auth().languageCode = "pt";
      if(!currentUser.emailVerified){
@@ -133,7 +161,28 @@ function loginEmail() {
     }); 
 }
 
+function redefinirSenha(){
+    statuslogin.innerText =""
+    var email = document.getElementById('email');
+    var end= email.value
+    if(email.value==""){
+        alert("Digite o seu e-mail no campo E-mail")
+    }else{
+        firebase.auth().sendPasswordResetEmail(end).then(()=>{
+            alert("E-mail de verificação enviado! Clique no link da mensagem enviada para confirmar.")
+        }).catch(error =>{
 
+            console.log("error: "+ error)
+            console.log('error code: ', error.code);
+             console.log('error message', error.message);
+            if(error.code=="auth/user-not-found"){
+                mensagem = 'Não há registro de usuário correspondente a este e-mail. O usuário pode ter sido excluído.'
+             }
+             statuslogin.innerText = mensagem
+        });
+    }
+     
+} 
 /**
  * Listener de dom ready
  */
@@ -150,14 +199,26 @@ document.addEventListener("DOMContentLoaded", function () {
        
        firebase.auth().languageCode = "pt";
         if(!currentUser.emailVerified){
-            currentUser.sendEmailVerification().then(()=>{
-                alert("E-mail de verificação enviado!")
+            //btnLogin.setAttribute("disabled","disabled")
+            //currentUser.sendEmailVerification().then(()=>{
+                //alert("E-mail de verificação enviado!")
+            
+            //})
+            //alert("E-mail de verificação ainda não confirmado. Verifique sua caixa de entrada do e-mail ////cadastrado.")
+
+            firebase.auth().currentUser.sendEmailVerification().then(()=>{
+                alert("E-mail de verificação enviado ou não confirmado! Clique no link da mensagem enviada para confirmar.")
             })
         }else{
+            //btnLogin.removeAttribute("disabled")
             infologin.innerText = 'Você está logado como: '+currentUser.email;
-            SalvaUsuarioStorage();
+            
+            window.location.replace("../../");
         }
-        
+        SalvaUsuarioStorage();
+       // infologin.innerText = 'Você está logado como: '+currentUser.email;
+       // SalvaUsuarioStorage();
+
 
         /////rrrrrrr
         //window.location.replace("../");

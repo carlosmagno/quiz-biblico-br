@@ -69,19 +69,24 @@ function EnviarQuestao() {
   QuestaoPraEnviar();
   var questaoid = BD_Perguntas.child(categoria).push().key; // Criando o ID da pergunta. 
 
-  //Executa a função de gravar os dados acima armazenados no banco de dados.
-  BD_Perguntas.child(categoria).child(questaoid).update(questao)
+  //Se algum dos campos está vazio não enviar a questão
+  if(pergunta_colab.value==""||altA.value == ""||altB.value ==""||altC.value ==""||altD.value ==""||correta.value == ""){
+      alert("Um ou mais campos estão vazios. Verifique por favor!")
+  }else{
 
-  .then ( //Se não houver erros executa esse trecho>>>
-    function() {
-    ApagaCampos();
-    window.alert ("Questão enviada com sucesso!")
-  }) 
-  .catch ( //Se não há erros executa esse trecho>>>
-    function() {
-    window.alert ("[ERRO] Algum problema aconteceu!")       
-  })
-  
+      //Executa a função de gravar os dados acima armazenados no banco de dados.
+      BD_Perguntas.child(categoria).child(questaoid).update(questao)
+
+      .then ( //Se não houver erros executa esse trecho>>>
+        function() {
+        ApagaCampos();
+        window.alert ("Questão enviada com sucesso!")
+      }) 
+      .catch ( //Se não há erros executa esse trecho>>>
+        function() {
+        window.alert ("[ERRO] Algum problema aconteceu!")       
+      })
+  }
 };
     
 function ExibirQuestao(){

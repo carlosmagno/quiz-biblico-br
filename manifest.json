@@ -1,0 +1,52 @@
+{
+  "name": "quizbiblico-br.web.app",
+  "short_name": "Quiz Bíblico",
+  "theme_color": "#5f93e2",
+  "background_color": "black",
+  "display": "standalone",
+  "Scope": "/app/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "imagesapp/72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "imagesapp/96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "imagesapp/128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "imagesapp/144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "imagesapp/152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "imagesapp/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "imagesapp/384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "imagesapp/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": "null"
+}

@@ -23,7 +23,7 @@ h1 {
     border-color: white;
     border-radius: 10px;
     max-width: 820px;
-    width: 62vw;
+    width: auto;
     border: 2px;
     padding: 5px 30px;
     margin-bottom: 20px;
@@ -63,7 +63,7 @@ h1 {
     display: inline-block;
     text-align: left;
     color: white;
-    width: 9vw;
+    width: auto;
 }
 
 #botao {
@@ -93,6 +93,7 @@ color: rgb(21, 233, 222);
 #rodape {
     position: relative;
     margin-top: 20px;
+    margin-bottom: 20px;
 
 
 }
@@ -180,7 +181,7 @@ picture>img {
     .labelform {
         display: inline-block;
         text-align: left;
-        color: rgb(8, 8, 8);
+        color: rgb(255, 255, 255);
         width: 75vw;
     }
     
@@ -199,5 +200,12 @@ picture>img {
         display: inline;
         max-width: 90vw;
         font-size: 3vw;
+    }
+
+    #rodape {
+        position: static;
+        margin-bottom: 20px;
+    
+    
     }
 }       

@@ -103,9 +103,25 @@ footer {
   width: 100%;
   color: rgb(84, 186, 211);
   font-style: italic;
+ 
 
 }
 
+footer a{
+  color: rgb(84, 186, 211);
+  /* text-decoration: none; */
+  font-size: inherit;
+}
+span#redefinir{
+  display: inline-block;
+  margin-top: 20px;
+  color:rgb(34, 176, 233);
+}
+
+span#redefinir:hover{
+  color:rgb(234, 238, 240);
+  cursor:pointer
+}
 
 @media (max-width: 700px) {
   .logo {
@@ -150,7 +166,7 @@ footer {
   }
 
     footer {
-      font-size:3vw;
+      font-size:2.5vw;
       position: static;
       text-align: center;
       bottom: 0;
