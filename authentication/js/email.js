@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
             //btnLogin.removeAttribute("disabled")
             infologin.innerText = 'Você está logado como: '+currentUser.email;
             
-            window.location.replace("../../");
+            window.location.replace("../");
         }
         SalvaUsuarioStorage();
        // infologin.innerText = 'Você está logado como: '+currentUser.email;
