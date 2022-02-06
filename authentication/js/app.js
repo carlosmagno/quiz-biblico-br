@@ -205,13 +205,13 @@ function logout2() {
             //window.location.replace("https://carlosmagno.github.io/quiz-biblico/");
             //Quando o conteudo for carregado se for um usuário logado posso usar esse código para exibir o conteudo especifico
         }else {
-            infologin2.innerText = 'Você precisa fazer login para ter acesso ao jogo!'
-            var url = window.location + "";
-            var url = url.replace("../");
-            var newUrl = url.split('/')[0];
+            //infologin2.innerText = 'Você precisa fazer login para ter acesso ao jogo!'
+            //var url = window.location + "";
+            //var url = url.replace("../");
+            //var newUrl = url.split('/')[0];
 
-            location.href = newUrl + 'authentication/login';
-            //location.href = '../authentication/login';
+           // location.href = newUrl + 'authentication/login';
+            location.href = '../authentication/login';
             console.log('não há usuários logados!');
 
         }
