@@ -211,7 +211,7 @@ function logout2() {
             //var newUrl = url.split('/')[0];
 
            // location.href = newUrl + 'authentication/login';
-            location.href = '../authentication/login';
+            location.href = '../../authentication/login';
             console.log('não há usuários logados!');
 
         }
