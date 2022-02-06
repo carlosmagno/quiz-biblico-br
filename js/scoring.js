@@ -58,7 +58,7 @@ function getScoringDataBase2() {
 var arrayScore=[]
 function getScoringDataBase() {
     
-    refScoring.orderByChild('PontosVencedor').once('value').then(snap=>{
+    refScoring.orderByChild('PontosVencedor').limitToFirst(10).once('value').then(snap=>{
         
         snap.forEach ((childSnapshot) => {
             var childData = childSnapshot.val();

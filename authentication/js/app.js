@@ -64,6 +64,13 @@ function logout2() {
         if(currentUser){
             //localStorage.setItem("usuario",currentUser.uid)
             //localStorage.setItem("email",currentUser.email)
+             //Mudando idioma do firebase
+      /* firebase.auth().languageCode = "pt";
+       if(!currentUser.emailVerified){
+           currentUser.sendEmailVerification().then(()=>{
+               alert("E-mail de verificação enviado!")
+           })
+       }; */
             PreencheLogin();
 
            // console.log('dislplayName: ', currentUser.displayName);

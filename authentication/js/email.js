@@ -61,7 +61,17 @@ function createLogin() {
             Usuarios.child(usuario).set(NovoUsuario);
             console.log('Novo Usuario criado no BD');
             //////rrrrrr
-            window.location.replace("../../");
+
+
+            firebase.auth().languageCode = "pt";
+            if(!currentUser.emailVerified){
+                currentUser.sendEmailVerification().then(()=>{
+                    alert("E-mail de verificação enviado!")
+                })
+            }else{
+               window.location.replace("../../");
+            }
+              
         });
 
     }).catch(error =>{
@@ -88,8 +98,17 @@ function loginEmail() {
         usuario=currentUser.user.uid;
         currentemail=currentUser.user.email
         SalvaUsuarioStorage();
+        window.location.replace("../../");
      ///////rrrrrrrrr
-       window.location.replace("../../");
+     /*firebase.auth().languageCode = "pt";
+     if(!currentUser.emailVerified){
+         currentUser.sendEmailVerification().then(()=>{
+             alert("E-mail de verificação enviado!")
+         })
+     }else{
+        
+     }
+       */
 
     }).catch(error =>{
         
@@ -127,9 +146,19 @@ document.addEventListener("DOMContentLoaded", function () {
         //console.log('displayName: ', currentUser.displayName);
         //console.log('Uid: ', currentUser.uid);
        // console.log('Email do Usuário: ', currentUser.email);
+       //Mudando idioma do firebase
+       
+       firebase.auth().languageCode = "pt";
+        if(!currentUser.emailVerified){
+            currentUser.sendEmailVerification().then(()=>{
+                alert("E-mail de verificação enviado!")
+            })
+        }else{
+            infologin.innerText = 'Você está logado como: '+currentUser.email;
+            SalvaUsuarioStorage();
+        }
         
-        infologin.innerText = 'Você está logado como: '+currentUser.email;
-        SalvaUsuarioStorage();
+
         /////rrrrrrr
         //window.location.replace("../");
         //window.location.replace("https://carlosmagno.github.io/quiz-biblico/");

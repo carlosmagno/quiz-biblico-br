@@ -45,6 +45,11 @@ a {
     color: rgb(255, 255, 255); 
 }
 
+footer a{
+    color: rgb(84, 186, 211);
+    text-decoration: underline;
+}
+
 body > div> span {
     display: inline;
     color: aqua;
