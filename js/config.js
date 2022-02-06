@@ -60,7 +60,7 @@ btnOrdemPerguntas.addEventListener('mouseout',MudarTexto2) ;
  */
 //Função para salvar as configurações da partida no banco de dados
 function salvar() {
-    if((Categoria.value||Tempo.value||NomeEq1.value||Eq1Jog1.value||Eq1Jog2.value||Eq1Jog3.value|| Eq1Jog4.value||Eq1Jog5.value||Eq2Jog1.value||Eq2Jog2.value||Eq2Jog3.value||Eq2Jog4.value||Eq2Jog5.value!="")&&(Pontos.value||TotalPerguntas.value!=0)){
+    if((Categoria.value!=""&&Tempo.value!=""&&NomeEq1.value!=""&&Eq1Jog1.value!=""&&Eq1Jog2.value!=""&&Eq1Jog3.value!=""&&Eq1Jog4.value!=""&&Eq1Jog5.value!=""&&Eq2Jog1.value!=""&&Eq2Jog2.value!=""&&Eq2Jog3.value!=""&&Eq2Jog4.value!=""&&Eq2Jog5.value!="")&&(Pontos.value!=0 && TotalPerguntas.value!=0)){
         SalvarLocalStorage();
         if(ModoVoz.innerText=="Ativado"){
             ConfigVoz=true;
@@ -107,7 +107,7 @@ function salvar() {
 
     //return Categoria.value,TotalPerguntas.value
     }else{
-        alert("Todos os campos devem ser preenchidos!");
+        alert("Todos os campos devem ser preenchidos! Se tiver menos de 10 jogadores repita os nomes de alguns deles.");
     }
 };
 function MudarTexto(){
